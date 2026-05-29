@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponName: Test AR
   weaponIndex: 1
   clipSize: 30
-  bulletSpeed: 75
+  bulletSpeed: 50
   fireRate: 0.1
   reloadTime: 0.5
   bulletDamage: 3

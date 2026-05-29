@@ -1,18 +1,13 @@
 using UnityEngine;
 
-public class Crate : MonoBehaviour, IDamageable
-{
-    [SerializeField] private int hp;
+public class Crate : CharacterStats
+{ 
     [SerializeField] private GameObject loot;
 
-    public void TakeDamage(int damage)
+    protected override void Die()
     {
-        hp -= damage;
+        Instantiate(loot, transform.position, transform.rotation);
 
-        if (hp <= 0)
-        {
-            Instantiate(loot, transform.position, transform.rotation);
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
