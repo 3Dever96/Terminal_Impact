@@ -15,7 +15,7 @@ public class PlayerShootState : PlayerState
     }
 
     public override void UpdateState(PlayerController player)
-    {
+    { 
         Vector3 direction = Camera.main.transform.right * InputHandler.instance.Move.x + Camera.main.transform.forward * InputHandler.instance.Move.y;
         direction.y = 0f;
         direction = direction.normalized;
@@ -34,7 +34,7 @@ public class PlayerShootState : PlayerState
         look = look.normalized;
 
         player.FaceDirection(look, 1500f);
-
+        
         Vector3 velocity = direction * currentSpeed;
         velocity.y = -5f;
 
